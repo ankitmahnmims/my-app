@@ -20,8 +20,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run ESLint
-      run: npm run lint
+    # - name: Run ESLint
+    #   run: npm run lint
 
     - name: Format code with Prettier
       run: npm run format

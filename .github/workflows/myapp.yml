@@ -57,13 +57,5 @@ jobs:
     #       tags: myappgo/ankitnm:latest
 
     # - name: Build & push Docker image
-    #   id: Build-and-Push-Docker-Image
-    #   uses: mr-smithers-excellent/docker-build-push@v5
-    #   with:
-    #     image: myappgo/image
-    #     tags: latest
-    #     registry: registry-url.io
-    #     dockerfile: Dockerfile
-    #     username: ${{ secrets.DOCKER_USERNAME }}
-    #     password: ${{ secrets.DOCKER_PASSWORD }}
+ 
         

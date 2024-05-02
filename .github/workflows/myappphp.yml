@@ -25,6 +25,7 @@ jobs:
       
     - name: Install dependencies
       run: |
+        composer update
         composer install --no-progress --no-suggest
         composer global require squizlabs/php_codesniffer
         composer global require wp-coding-standards/wpcs

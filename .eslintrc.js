@@ -10,7 +10,9 @@ module.exports = {
     plugins: ['react', 'react-hooks', 'prettier'],
     rules: {
       "react/react-in-jsx-scope": "off",
-      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "react/jsx-uses-react": "error",   
+      "react/jsx-uses-vars": "error" 
     },
     settings: {
       react: {

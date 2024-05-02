@@ -35,14 +35,24 @@ jobs:
       run: |
         go test
 
-    - name: Login to Docker Hub
-      run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
- 
-    - name: Build Docker image
-      run: docker build -t ankitmahnmims/myappgo .
+    - name: Login to DockerHub
+      uses: docker/login-action@v1 
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_TOKEN }}
+        logout: true
 
-    - name: Push Docker image to Docker Hub
-      run: docker push ankitmahnmims/myappgo:latest
+    - name: Push to Docker Hub
+      uses: docker/build-push-action@v2
+      with:
+        push: true
+        tags: myappgo:latest
+
+    # - name: Build Docker image
+    #   run: docker build -t ankitmahnmims/myappgo .
+
+    # - name: Push Docker image to Docker Hub
+    #   run: docker push ankitmahnmims/myappgo:latest
     # - name: push to dockerhub
     #   uses: mr-smithers-excellent/docker-build-push@v6
     #   with:

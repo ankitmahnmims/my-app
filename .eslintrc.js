@@ -1,28 +1,21 @@
 module.exports = {
-    parserOptions: {
+  parserOptions: {
+    ecmaVersion: 2021,
     sourceType: 'module',
-    ecmaVersion: 2020,
     ecmaFeatures: {
-      jsx: true // Enable JSX
+      jsx: true
     }
   },
-    extends: ['eslint:recommended', 'plugin:@next/next/recommended', 'prettier', 'plugin:react/recommended'],
-    plugins: ['react', 'react-hooks', 'prettier'],
-    rules: {
-      "react/no-unknown-property": [
-        2,
-        {
-          "ignore": [
-            "jsx"
-          ]
-        }
-      ]
-    },
-    settings: {
-      react: {
-        version: 'detect'
-      }
+  extends: ['eslint:recommended', 'plugin:react/recommended', 'prettier'],
+  plugins: ['react', 'prettier'],
+  rules: {
+    'prettier/prettier': 'error',
+    'react/jsx-uses-react': 'error',
+    'react/jsx-uses-vars': 'error'
+  },
+  settings: {
+    react: {
+      version: 'detect'
     }
   }
-  ;
-  
+};

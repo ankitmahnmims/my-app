@@ -23,7 +23,7 @@ jobs:
     - name: Run ESLint
       run: npm run lint
 
-      - name: Format code with Prettier
+    - name: Format code with Prettier
       run: npm run format
       
     - name: Build Next.js app

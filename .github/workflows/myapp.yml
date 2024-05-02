@@ -1,0 +1,48 @@
+name: Go_CI_Workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code to Build
+      uses: actions/checkout@v2
+    
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.19'
+      
+    - name: Install Go and Run Code Linting
+      id: Lint-Check
+      uses: reviewdog/action-golangci-lint@v2
+      
+      
+    - name: Build Code
+      id: Build-Code
+      run: |
+        go build -v .
+        
+    - name: Unit Test
+      id: Unit-Test-Run
+      run: |
+        go test
+
+    - name: Build & push Docker image
+      id: Build-and-Push-Docker-Image
+      uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+        image: ankitmahnmims/myappgo
+        tags: latest
+        registry: registry-url.io
+        dockerfile: Dockerfile
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        

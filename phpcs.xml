@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ruleset name="MyApp">
+    <description>MyApp coding standard</description>
+    
+    <!-- Specify standard -->
+    <arg name="standard" value="PSR12"/>
+    
+    <!-- Ignore directories -->
+    <exclude-pattern>/vendor/*</exclude-pattern>
+    <exclude-pattern>/tests/*</exclude-pattern>
+    <exclude-pattern>/node_modules/*</exclude-pattern>
+    
+    <!-- Ignore files -->
+    <exclude-pattern>*.min.js</exclude-pattern>
+    <exclude-pattern>*.min.css</exclude-pattern>
+    <exclude-pattern>*.min.html</exclude-pattern>
+    <exclude-pattern>*.min.php</exclude-pattern>
+</ruleset>

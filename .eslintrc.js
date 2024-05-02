@@ -7,7 +7,7 @@ module.exports = {
     }
   },
     extends: ['eslint:recommended', 'plugin:@next/next/recommended', 'prettier', 'plugin:react/recommended'],
-    plugins: ['react', 'react-hooks', 'prettier'],
+    plugins: ['react'],
     rules: {
       "react/react-in-jsx-scope": "off",
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],

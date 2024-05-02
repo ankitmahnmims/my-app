@@ -3,19 +3,18 @@ module.exports = {
     ecmaVersion: 2021,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   extends: ['eslint:recommended', 'plugin:react/recommended', 'prettier'],
   plugins: ['react', 'prettier'],
   rules: {
     'prettier/prettier': 'error',
-    'react/jsx-uses-react': 'error',
-    'react/jsx-uses-vars': 'error'
+    'react/react-in-jsx-scope': 'off', // Turn off this rule
   },
   settings: {
     react: {
-      version: 'detect'
-    }
-  }
+      version: 'detect',
+    },
+  },
 };

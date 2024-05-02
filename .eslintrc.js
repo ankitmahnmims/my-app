@@ -6,7 +6,7 @@ module.exports = {
       jsx: true // Enable JSX
     }
   },
-    extends: ['eslint:recommended', 'plugin:@next/next/recommended', 'prettier'],
+    extends: ['eslint:recommended', 'plugin:@next/next/recommended', 'prettier', 'plugin:react/recommended'],
     plugins: ['react', 'react-hooks', 'prettier'],
     rules: {
       "react/react-in-jsx-scope": "off",

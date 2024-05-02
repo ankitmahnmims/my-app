@@ -3,7 +3,7 @@
 FROM golang:1.19
 
 # Set destination for COPY
-WORKDIR /app
+WORKDIR /myapp
 
 # Download Go modules
 COPY go.mod go.sum ./
@@ -20,6 +20,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o /docker-gs-ping
 # But we can (optionally) document in the Dockerfile what ports
 # the application is going to listen on by default.
 # https://docs.docker.com/engine/reference/builder/#expose
+# adding a comment
 EXPOSE 8080
 
 # Run

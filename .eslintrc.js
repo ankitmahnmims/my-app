@@ -1,6 +1,8 @@
 module.exports = {
+  parser: '@babel/eslint-parser',
   parserOptions: {
-    ecmaVersion: 2021,
+    requireConfigFile: false,
+    ecmaVersion: 2020,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
@@ -16,5 +18,8 @@ module.exports = {
     react: {
       version: 'detect',
     },
+  },
+  env: {
+    node: true,
   },
 };

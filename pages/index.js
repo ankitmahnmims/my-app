@@ -60,8 +60,7 @@ export default function Home() {
           <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
         </a>
       </footer>
-
-      <style jsx>{`
+      <style>{`
         main {
           padding: 5rem 0;
           flex: 1;
@@ -105,7 +104,7 @@ export default function Home() {
         }
       `}</style>
 
-      <style jsx global>{`
+      {/* <style jsx global>{`
         html,
         body {
           padding: 0;
@@ -126,7 +125,7 @@ export default function Home() {
         * {
           box-sizing: border-box;
         }
-      `}</style>
+      `}</style> */}
     </div>
   );
 }

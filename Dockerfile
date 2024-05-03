@@ -20,7 +20,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copy the built Next.js application from the previous stage to the NGINX server
-COPY --from=builder /app/out /usr/share/nginx/html
+COPY --from=builder /app /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80

@@ -4,6 +4,7 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
+    "test": "",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
